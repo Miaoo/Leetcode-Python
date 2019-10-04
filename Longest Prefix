@@ -1,0 +1,19 @@
+class Solution(object):
+    def longestCommonPrefix(self, strs):
+        if len(strs)==0:
+            common = ''
+        else:
+            sortlist = sorted(strs)
+            mina = sortlist[0]
+            maxa = sortlist[-1]
+            common = ''
+            i = 0
+            while i <len(mina):
+                if mina[i] == maxa[i]:
+                    common = common + mina[i]
+                    i +=1
+                else:
+                    break
+                
+        return common
+
