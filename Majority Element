@@ -1,0 +1,13 @@
+import collections
+class Solution(object):
+    def majorityElement(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        counts = collections.Counter(nums)
+        ret = []
+        for num in counts:
+            if counts[num] > len(nums)/2:
+                return num
